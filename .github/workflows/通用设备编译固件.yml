@@ -44,7 +44,6 @@ jobs:
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
-          docker rmi `docker images -q`
           [[ -n "${AGENT_TOOLSDIRECTORY}" ]] && sudo rm -rf "${AGENT_TOOLSDIRECTORY}"
           sudo rm -rf /usr/share/dotnet /etc/apt/sources.list.d /usr/local/lib/android 2>/dev/null
           sudo -E apt-get -y update
@@ -191,7 +190,7 @@ jobs:
           body: |
 
             ### OpenWrt Image information
-            - Default IP: 192.168.1.1
+            - Default IP: 192.168.5.1
             - Default username: root
             - Default password: password
             - Default WIFI name: OpenWrt
