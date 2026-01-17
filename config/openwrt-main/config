@@ -47,17 +47,19 @@ CONFIG_TARGET_armsr=y
 # CONFIG_TARGET_uml is not set
 # CONFIG_TARGET_zynq is not set
 # CONFIG_TARGET_x86 is not set
+CONFIG_TARGET_x86=y
+CONFIG_TARGET_x86_64=y
 # CONFIG_TARGET_armsr_armv7 is not set
-CONFIG_TARGET_armsr_armv8=y
+# CONFIG_TARGET_armsr_armv8=y
 # CONFIG_TARGET_MULTI_PROFILE is not set
-CONFIG_TARGET_armsr_armv8_DEVICE_generic=y
+# CONFIG_TARGET_armsr_armv8_DEVICE_generic=y
 CONFIG_HAS_SUBTARGETS=y
 CONFIG_HAS_DEVICES=y
-CONFIG_TARGET_BOARD="armsr"
-CONFIG_TARGET_SUBTARGET="armv8"
+CONFIG_TARGET_BOARD="x86"
+CONFIG_TARGET_SUBTARGET="64"
 CONFIG_TARGET_PROFILE="DEVICE_generic"
-CONFIG_TARGET_ARCH_PACKAGES="aarch64_generic"
-CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mcpu=generic"
+CONFIG_TARGET_ARCH_PACKAGES="x86_64"
+CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mtune=generic"
 CONFIG_CPU_TYPE="generic"
 CONFIG_LINUX_6_1=y
 CONFIG_DEFAULT_base-files=y
@@ -69,11 +71,11 @@ CONFIG_DEFAULT_dropbear=y
 CONFIG_DEFAULT_e2fsprogs=y
 CONFIG_DEFAULT_firewall4=y
 CONFIG_DEFAULT_fstools=y
-CONFIG_DEFAULT_kmod-amazon-ena=y
-CONFIG_DEFAULT_kmod-atlantic=y
-CONFIG_DEFAULT_kmod-dwmac-imx=y
-CONFIG_DEFAULT_kmod-dwmac-rockchip=y
-CONFIG_DEFAULT_kmod-dwmac-sun8i=y
+# CONFIG_DEFAULT_kmod-amazon-ena=y
+# CONFIG_DEFAULT_kmod-atlantic=y
+# CONFIG_DEFAULT_kmod-dwmac-imx=y
+# CONFIG_DEFAULT_kmod-dwmac-rockchip=y
+# CONFIG_DEFAULT_kmod-dwmac-sun8i=y
 CONFIG_DEFAULT_kmod-e1000e=y
 CONFIG_DEFAULT_kmod-fsl-dpaa1-net=y
 CONFIG_DEFAULT_kmod-fsl-dpaa2-net=y
